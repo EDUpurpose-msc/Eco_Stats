@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
     <link rel="stylesheet" href="styles.css">
-    <title>Dashboard | EcoStats</title>
+    <title>Dashboard |EcoStats</title>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
             </div>
             <i class="fas fa-bell"></i>
             <div class="user">
-                <img src="img/user.png" alt="">
+                <img src="img/user.png">
             </div>
         </div>
         <div class="sidebar">
@@ -54,64 +55,77 @@
             </ul>
         </div>
         <div class="main">
+            <div class="title">
+                <h2>Land Management</h2>
+            </div>
             <div class="cards">
-                <div class="card" id="landManagementCard">
-                    <div class="card-content">
-                        <div class="card-name">Land Management</div>
-                    </div>
-                    <div class="icon-box">
-                        <i class="fas fa-user"></i>
+                <div class="card" id="card1">
+                    <div class="card-content" >
+                        <div class="card-name">Residential Patent</div>
                     </div>
                 </div>
                 <div class="card" id="card2">
-                    <div class="card-content">
-                        <div class="card-name">Biodiversity Management</div>
-                    </div>
-                    <div class="icon-box">
-                        <i class="fas fa-tree"></i>
+                    <div class="card-content" >
+                        <div class="card-name">Agricultural Patent</div>
                     </div>
                 </div>
                 <div class="card" id="card3">
-                    <div class="card-content">
-                        <div class="card-name">Forestry Management</div>
-                    </div>
-                    <div class="icon-box">
-                        <i class="fas fa-database"></i>
+                    <div class="card-content" >
+                        <div class="card-name">Special Patent</div>
                     </div>
                 </div>
             </div>
             <div class="charts">
-                <div class="chart">
-                    <h2>Total Actual Area Planted per NGP Year (in hectare): 2011-2022</h2>
+                <div class="chart" id="chart1">
+                    <h2>Number of Residential Patents issued by Year: 2011-2022</h2>
                     <div>
-                        <canvas id="lineChart"></canvas>
+                        <canvas id="barChart"></canvas>
                     </div>
                 </div>
-                <div class="chart doughnut-chart">
+                <div class="chart doughnut-chart" id="chart2">
                     <h2>Percentage of Total Residential Patents Issued by Municipality: 2011-2022</h2>
                     <div>
                         <canvas id="doughnut"></canvas>
                     </div>
                 </div>
-                <div class="chart">
-                    <h2>Total Number of Fishpond Lease Agreement (FLA) Issued by Municipality and Status</h2>
+                <div class="chart" id="chart3" style="display:none;">
+                    <h2>Number of Agricultural Patents issued by Municipality: 2010-2022</h2>
                     <div>
-                        <canvas id="barChart"></canvas>
+                        <canvas id="lineChart1"></canvas>
+                    </div>
+                </div>
+                <div class="chart doughnut-chart" id="chart4">
+                    <h2>Percentage of Total Agricultural Patents Issued by Municipality: 2010-2022</h2>
+                    <div>
+                        <canvas id="doughnut2"></canvas>
+                    </div>
+                </div>
+                <div class="chart" id="chart5">
+                    <h2>Number of Special Patents Issued for Schools by Municipality and Sex: 2015-2022</h2>
+                    <div>
+                        <canvas id="barChart5"></canvas>
+                    </div>
+                </div>
+                <div class="chart doughnut-chart" id="chart6" style="display:none;">
+                    <h2>Percentage Total of Special Patents Issued for Schools by Municipality and Sex: 2015-2022</h2>
+                    <div>
+                        <canvas id="doughnut3"></canvas>
                     </div>
                 </div>
             </div>
+            <div class="data" id="data"></div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
-    <script src="chart1.js"></script>
-    <script src="chart2.js"></script>
-    <script src="chart3.js"></script>
-    <script src="js/land.js"></script>
-    <script>
-        document.getElementById('landManagementCard').addEventListener('click', function() {
-            window.location.href = 'Biodiversity.html';
-        });
-    </script>
+    <script src="chart/chart1.js"></script>
+    <script src="chart/chart2.js"></script>
+    <script src="chart/chart3.js"></script>
+    <script src="chart/chart4.js"></script>
+    <script src="chart/chart5.js"></script>
+    <script src="chart/chart6.js"></script>
+
+
+    <script src="JS/land.js"></script>
 </body>
 
 </html>

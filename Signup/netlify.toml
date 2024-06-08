@@ -3,5 +3,5 @@ publish = "build"
 
 [[redirects]]
 from = "/*"
-to = "/LoginSignup.jsx"
+to = "/Signup/login-signup/src/Components/LoginSignup/LoginSignup.jsx"
 status = 200

@@ -1,7 +1,7 @@
 [build]
-functions = "functions"
+publish = "build"
 
 [[redirects]]
-from = "/api/*"
-to = "LoginSignup.jsx"
+from = "/*"
+to = "/LoginSignup.jsx"
 status = 200

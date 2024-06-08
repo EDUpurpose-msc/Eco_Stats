@@ -3,5 +3,5 @@ functions = "functions"
 
 [[redirects]]
 from = "/api/*"
-to = "/.netlify/functions/api"
+to = "LoginSignup.jsx"
 status = 200
